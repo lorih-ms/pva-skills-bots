@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.botframework.com/schemas/skills/v2.2/skill-manifest.json",
+  "$id": "cr70b_agent1",
+  "name": "Agent 1",
+  "version": "6/25/2025 10:01:23 PM",
+  "description": "Power Virtual Agents manifest",
+  "publisherName": "Using Power Virtual Agents",
+  "privacyUrl": "https://go.microsoft.com/fwlink/?linkid=2138950",
+  "iconUrl": "https://bot-framework.azureedge.net/bot-icons-v1/8eb1a88e-e97a-5439-9be0-59a262f4f239_J64OV7xj8hNyZ6rA699Bsw422Ae06Z34YqAokEbJ6iV5qI.png",
+  "endpoints": [
+    {
+      "name": "Power Virtual Agents Skill PROD",
+      "protocol": "BotFrameworkV3",
+      "description": "PROD",
+      "endpointUrl": "https://pvaruntime.us-il201.gateway.test.island.powerapps.com/api/runtime/environments/7406afe3-db02-e048-abe6-e355de3a1b03/bots/cr70b_agent1/messages",
+      "msAppId": "093fac66-a490-4f2e-bc55-7aea28809d48"
+    }
+  ],
+  "activities": {
+    "message": {
+      "type": "message",
+      "description": "Message activity types"
+    },
+    "Thank you-cr70b_agent1.topic.ThankYou": {
+      "type": "event",
+      "name": "dispatchTo_cr70b_agent1.topic.ThankYou",
+      "description": "This topic triggers when the user says thank you."
+    },
+    "Start Over-cr70b_agent1.topic.StartOver": {
+      "type": "event",
+      "name": "dispatchTo_cr70b_agent1.topic.StartOver",
+      "description": "Start Over"
+    },
+    "Goodbye-cr70b_agent1.topic.Goodbye": {
+      "type": "event",
+      "name": "dispatchTo_cr70b_agent1.topic.Goodbye",
+      "description": "This topic triggers when the user says goodbye. By default, it does not end the conversation. If you would like to end the conversation when the user says goodbye, you can add an \"End of Conversation\" action to this topic, or redirect to the \"End of Conversation\" system topic."
+    },
+    "Greeting-cr70b_agent1.topic.Greeting": {
+      "type": "event",
+      "name": "dispatchTo_cr70b_agent1.topic.Greeting",
+      "description": "This topic is triggered when the user greets the agent."
+    }
+  },
+  "definitions": {
+
+  },
+  "dispatchModels": {
+    "languages": {
+      "en": [
+        {
+          "name": "Power Virtual Agents Skill LU English",
+          "contentType": "application/lu",
+          "url": "intents.lu",
+          "description": "English:en language model for the skill"
+        }
+      ]
+    },
+    "intents": [
+      "Thank you-cr70b_agent1.topic.ThankYou",
+      "Start Over-cr70b_agent1.topic.StartOver",
+      "Goodbye-cr70b_agent1.topic.Goodbye",
+      "Greeting-cr70b_agent1.topic.Greeting"
+    ]
+  }
+}
